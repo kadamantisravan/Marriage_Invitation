@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.invitation {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.countdown {
+  margin: 20px 0;
+}
+
+#timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: #2575fc;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc70;
+  color: black;
+}
+
+.contacts {
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  margin-top: 15px;
+  font-style: italic;
+}
+.gallery {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.gallery img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
