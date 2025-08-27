@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
   <style>
+    @media (max-width: 600px) {
+      .card, .rsvp {
+        margin-top: 12px !important;
+        margin-bottom: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box;
+        width: 95% !important;
+      }
+    }
     /* Flower falling animation */
     .flower-container {
       position: fixed;
@@ -158,12 +171,14 @@
       color: #7e22ce;
     }
     .rsvp input, .rsvp select, .rsvp button {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
     }
     .rsvp input, .rsvp select {
       background: #f3f4f6;
@@ -178,32 +193,34 @@
     .rsvp button:hover {
       transform: scale(1.05);
     }
-    .success {
-      color: green;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+  .success {
+    color: green;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    color: #333;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+  }
 
-    footer {
-      margin-top: 20px;
-      font-style: italic;
-      animation: fadeIn 3s ease;
-    }
-
-    /* Slideshow */
-    .slideshow-container {
-      position: relative;
-      max-width: 320px;
-      height: 200px;
-      margin: 18px auto 10px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.22);
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  /* Slideshow */
+  .slideshow-container {
+    position: relative;
+    max-width: 320px;
+    height: 200px;
+    margin: 18px auto 10px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.22);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
     .slides {
       display: none;
       width: 100%;
