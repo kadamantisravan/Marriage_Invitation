@@ -265,13 +265,13 @@
   <div class="flower-container" id="flowerContainer"></div>
 
   <h1>🎉 Special Invitation</h1>
-  <p>You're Invited! 💍 Reception Party</p>
+  <p>You're Invited! 💍 Marriage Ceremony</p>
 
   <!-- Slideshow (moved to top) -->
   <div class="slideshow-container">
-  <img class="slides fade" src="pic1.jpg" alt="Celebration Pic 1">
-  <img class="slides fade" src="pic2.jpg" alt="Celebration Pic 2">
-  <img class="slides fade" src="pic3.jpg" alt="Celebration Pic 3">
+  <img class="slides fade" src="b1.jpg" alt="Celebration Pic 1">
+  <img class="slides fade" src="b2.jpg" alt="Celebration Pic 2">
+  <img class="slides fade" src="b3.jpg" alt="Celebration Pic 3">
   </div>
 
   <h2>Kadamanti Bhaskar ❤️ Shikha Choudhary</h2>
@@ -286,51 +286,35 @@
 
   <!-- Buttons -->
   <div class="buttons">
-    <a class="map" target="_blank"
-       href="https://maps.app.goo.gl/54q2z8yeBen8KW527">
-       📍 Get Directions
-    </a>
-    <a class="gcal" target="_blank"
-       href="https://www.google.com/calendar/render?action=TEMPLATE&text=Engagement+Reception+-+Kadamanti+Bhaskar+%26+Shikha+Choudhary&dates=20251126T053000Z/20251126T080000Z&details=We+look+forward+to+celebrating+with+you!&location=DCR+Convention+Hall,+NH-5,+Thagarapuvalasa,+Andhra+Pradesh">
-       📅 Add to Google Calendar
-    </a>
-    <a class="ics" href="invitation.ics" download="Engagement-Reception.ics">
-       📂 Download .ICS
-    </a>
+   <a class="map" target="_blank"
+     href="https://maps.app.goo.gl/Wd3KtwWtwEmZrZwF9">
+     📍 Get Directions
+   </a>
+   <a class="gcal" target="_blank"
+     href="https://www.google.com/calendar/render?action=TEMPLATE&text=Marriage+-+Kadamanti+Bhaskar+%26+Shikha+Choudhary&dates=20251122T133000Z/20251122T170000Z&details=We+look+forward+to+celebrating+with+you!&location=The+Royal+Height+Banquet,+4th+floor,+Vendor+Market,+Kutchery+Road,+Ranchi+834001">
+     📅 Add to Google Calendar
+   </a>
+   <a class="ics" href="invitation.ics" download="Marriage-Invitation.ics">
+     📂 Download .ICS
+   </a>
   </div>
 
   <!-- Event Details -->
   <div class="card">
-    <h3>📍 Venue</h3>
-    <p>DCR Convention Hall</p>
-    <p>2nd Floor: Function • 1st Floor: Food</p>
+  <h3>📍 Venue</h3>
+  <p>The Royal Height Banquet</p>
+  <p>4th floor, Vendor Market, Kutchery Road, Ranchi 834001</p>
 
-    <h3>🗓 Date & Time</h3>
-    <p>Wednesday, 26 November 2025</p>
-    <p>Starts at 11:00 AM (IST)</p>
+  <h3>🗓 Date & Time</h3>
+  <p>Saturday, 22nd November 2025</p>
+  <p>Starts at: 7:00 pm onwards</p>
 
-    <h3>📞 Contacts</h3>
-    <p>Father: +91 81069 86050</p>
-    <p>Mother: +91 91004 54996</p>
-    <p>Son: +91 93988 08606</p>
+  <h3>📞 Contacts</h3>
+  <p>Father: 7903957935</p>
+  <p>Son: 9608174994</p>
   </div>
 
   <!-- RSVP Form -->
-  <div class="rsvp">
-    <h3>📩 RSVP</h3>
-    <form id="rsvpForm" action="https://formspree.io/f/xpwjwaeq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <select name="attendance" required>
-        <option value="">Will you attend?</option>
-        <option value="Yes">Yes 🎉</option>
-        <option value="No">No ❌</option>
-        <option value="Maybe">Maybe 🤔</option>
-      </select>
-      <button type="submit">Submit RSVP</button>
-      <div id="rsvpMessage" class="success"></div>
-    </form>
-  </div>
 
 
   <footer>
@@ -357,7 +341,7 @@
     }
     setInterval(createFlower, 350);
     // Countdown Timer
-    const eventDate = new Date("Nov 26, 2025 11:00:00").getTime();
+  const eventDate = new Date("Nov 22, 2025 19:00:00").getTime();
     setInterval(function () {
       const now = new Date().getTime();
       const distance = eventDate - now;
@@ -368,29 +352,6 @@
       document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
     }, 1000);
 
-    // RSVP form
-    const form = document.getElementById("rsvpForm");
-    const message = document.getElementById("rsvpMessage");
-
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          message.textContent = "✅ Thank you! Your RSVP has been submitted.";
-          form.reset();
-        } else {
-          message.textContent = "❌ Oops! Something went wrong.";
-        }
-      } catch (error) {
-        message.textContent = "⚠️ Network error. Please try again.";
-      }
-    });
 
     // Slideshow logic (auto-scroll every 3 seconds, no buttons)
     let slideIndex = 0;
